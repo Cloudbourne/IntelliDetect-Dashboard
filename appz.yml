@@ -1,0 +1,24 @@
+app:
+  name: IntelliDetect Dashboard
+  code: INTDETDASH
+  notify: appz@cloudbourne.co
+
+build:
+  version: 0.1
+  env: DEV
+  build_file: none
+  output_files: output/*.zip
+  image_template: tensorflow_anomaly_ui-v1
+  image_name: myco/intellidetect-dashboard
+
+deploy:
+  context: myco/DEV
+  replicas: 1
+  port:
+  - 80
+
+monitor:
+  notify: appzops@cloudbourne.co      
+
+properties:
+  revision : 10
