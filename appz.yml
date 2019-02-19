@@ -10,6 +10,8 @@ build:
   output_files: output/*.zip
   image_template: tensorflow_anomaly_ui-v1
   image_name: myco/intellidetect-dashboard
+  args:
+    APPZ_BASE_HREF : /intellidetect-0-1/
 
 deploy:
   context: myco/DEV
